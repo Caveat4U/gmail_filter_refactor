@@ -35,9 +35,10 @@ class Filter(object):
 
 
 	def __eq__(self, other):
-		equals = False
+		equals = None
 		self.properties.sort()
 		other.properties.sort()
+		equals = len(self.properties) == len(other.properties)
 		for index, prop in enumerate(self.properties):
 			equals = equals and (prop == other.properties[index])
 			if equals is False:
@@ -115,13 +116,14 @@ def main():
 			if this_filter_list[0] == filter:
 				found = True
 				new_filters[i].append(filter)
-				exit("HA! Matched.")
+				# TODO - remove me
 				break
 
 		if not found:
 			new_filters.append([filter])
 
-	#print new_filters
+	for new_filter_group in new_filters:
+		print len(new_filter_group)
 
 # If actions are the same and filters are the same...
 
