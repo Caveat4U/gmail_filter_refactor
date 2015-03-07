@@ -110,11 +110,18 @@ def main():
 	for index, filter in enumerate(filters):
 		if len(new_filters) is 0:
 			new_filters.append([filter])
+		found = False
 		for i, this_filter_list in enumerate(new_filters):
 			if this_filter_list[0] == filter:
+				found = True
 				new_filters[i].append(filter)
+				exit("HA! Matched.")
 				break
-	print new_filters
+
+		if not found:
+			new_filters.append([filter])
+
+	#print new_filters
 
 # If actions are the same and filters are the same...
 
