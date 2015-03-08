@@ -4,6 +4,10 @@ class Property(object):
 		self.value = value
 		self.category = category
 
+	# def merge_by_category(self, other_prop):
+	# 	if self.category == other_prop.category:
+	# 		self.value = self.value + "OR" + other_prop.value
+
 	def __eq__(self, other):
 		equals = None
 		# They must both be of class Property
@@ -30,7 +34,14 @@ class Filter(object):
 		self.properties = []
 
 	def addProperty(self, new_prop):
-		self.properties.append(new_prop)
+		prop_exists = False
+		for prop in self.properties:
+			if prop.category == new_prop.category:
+				prop_exists = True
+				prop.value = prop.value + " OR " + new_prop.value
+				break
+		if not prop_exists:
+			self.properties.append(new_prop)
 
 	def getProperties(self):
 		return self.properties
@@ -38,6 +49,7 @@ class Filter(object):
 	def merge(self, other_filter):
 		for prop in other_filter.getProperties():
 			self.addProperty(prop)
+
 
 	def __eq__(self, other):
 		equals = None
@@ -119,7 +131,6 @@ def main():
 	filter_len = len(filters)
 	for index, filter in enumerate(filters):
 		if len(new_filters) is 0:
-			print "0 length"
 			new_filters.append(filter)
 			continue
 
