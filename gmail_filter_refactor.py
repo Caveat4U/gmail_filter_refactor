@@ -10,10 +10,9 @@ class Property(object):
 		equals = isinstance(other, self.__class__)
 		equals = equals and (self.name == other.name)
 		equals = equals and (self.category == other.category)
-		# If it's a condition, the values must equal each other, but otherwise, it doesn't matter
-		if self.category is "condition":
+		# If it's an action, the values must equal each other, but otherwise, it doesn't matter
+		if self.category is "action":
 			equals = equals and (self.value == other.value)
-
 		return equals
 
 	def __ne__(self, other):
@@ -33,6 +32,12 @@ class Filter(object):
 	def addProperty(self, new_prop):
 		self.properties.append(new_prop)
 
+	def getProperties(self):
+		return self.properties
+
+	def merge(self, other_filter):
+		for prop in other_filter.getProperties():
+			self.addProperty(prop)
 
 	def __eq__(self, other):
 		equals = None
@@ -55,10 +60,14 @@ class Filter(object):
 	def __repr__(self):
 		return "Filter Name: %s\nProperties:\n%s\n\n" % (self.filter_name, self.properties)
 
+	# def __contains__(self, other_filter):
+	# 	print other_filter
+	# 	return False
+
 
 import lxml.etree
 from itertools import combinations
-feed_url = 'http://earthquake.usgs.gov/earthquakes/catalogs/1hour-M1.xml'
+
 ns = {
 	'atom': 'http://www.w3.org/2005/Atom',
 	'apps': 'http://schemas.google.com/apps/2006'
@@ -110,20 +119,21 @@ def main():
 	filter_len = len(filters)
 	for index, filter in enumerate(filters):
 		if len(new_filters) is 0:
-			new_filters.append([filter])
+			print "0 length"
+			new_filters.append(filter)
+			continue
+
 		found = False
-		for i, this_filter_list in enumerate(new_filters):
-			if this_filter_list[0] == filter:
+		for this_filter in new_filters:
+			if this_filter == filter:
 				found = True
-				new_filters[i].append(filter)
-				# TODO - remove me
+				this_filter.merge(filter)
 				break
 
 		if not found:
-			new_filters.append([filter])
+			new_filters.append(filter)
 
-	for new_filter_group in new_filters:
-		print len(new_filter_group)
+	print len(filters), len(new_filters)
 
 # If actions are the same and filters are the same...
 
