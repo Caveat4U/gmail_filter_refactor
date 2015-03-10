@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:apps="http://schemas.google.com/apps/2006">
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="hasTheWord" value="@facebookmail.com OR @honestybox.com"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="label" value="Facebook"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldMarkAsRead" value="true"/>
+    <apps:property name="shouldTrash" value="true"/>
+    <apps:property name="to" value="chrissterlin+spam@gmail.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="from" value="hazelsboulder.com"/>
+    <apps:property name="label" value="Coupons"/>
+    <apps:property name="shouldArchive" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Coupons"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="pizzahut@pizzahutoffers.com OR staples@e.staples.com OR netsaavers@email.aa.com OR americanairlines@email.aa.com OR noreply@aerodesigns.com OR boulder@colormemine.com OR westminster@colormemine.com OR bjrpremierrewards@kobie.com OR hello@aerodesigns.com OR info@mail.hotels.com OR editorial@pinterest.com OR staples@easy.staples.com OR safeway@email.safeway.com OR marlboro@email.marlboro.com OR promo@email.newegg.com OR petsmart@email-petsmart.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="info@modmarket.com OR overlords@email.thinkgeek.com OR orientaltrading@email.oriental-trading.com OR worldmarket@emailworldmarket.com OR maddiecmm@gmail.com OR alchemy@kobie.com OR mycokerewards@mailusa.coca-cola.com OR bjssupport@bjspremierrewards.com OR contactus@goodwilldenver.org OR targetnews@emails.target.com OR savings@savingstar.com OR walgreens@e.walgreens.com OR texas_roadhouse@texasr.fbmta.com OR bedbathandbeyond@bedbathandbeyond.com OR news@emailservice.petco.com"/>
+    <apps:property name="label" value="Coupons"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="hasTheWord" value="studentadvantage"/>
+    <apps:property name="label" value="Coupons"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="things4fun.com OR noreply@fascinations.net"/>
+    <apps:property name="label" value="Inappropriate"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="hasTheWord" value="fastweb OR hostmonster OR CSCI2270"/>
+    <apps:property name="shouldArchive" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="itineraryair@trans.priceline.com OR americanairlines@aa.com OR americanairlines@checkin.email.aa.com OR americanairlines@aadvantage.email.aa.com OR notify@aa.globalnotifications.com OR itineraryair@trans.priceline.com OR travel@priceline.com OR fsmc@email.spiritairlines.com"/>
+    <apps:property name="label" value="Travel"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="from" value="noreply@email.recon.com"/>
+    <apps:property name="label" value="Inappropriate"/>
+    <apps:property name="shouldArchive" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="from" value="team@bdsm.com"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="label" value="Inappropriate"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Inappropriate"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="massagebycorbin@gmail.com OR noreply@members.recon.com OR messages@adam4adam.com OR support@barebackrt.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Inappropriate"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="to" value="chrissterli.n@gmail.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="subject" value="CouchPotato"/>
+    <apps:property name="label" value="Torrent"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="from" value="scott.fourstar@gmail.com OR mike@fourstarrealty.com OR mikebarton85@gmail.com OR benny@fourstarrealty.com OR benny.swan@gmail.com)"/>
+    <apps:property name="label" value="House"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldMarkAsRead" value="true"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="onlinepaymentsystem@nelnet.net"/>
+    <apps:property name="label" value="Loans"/>
+    <apps:property name="forwardTo" value="cathyknoxs@yahoo.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="House"/>
+    <apps:property name="from" value="noreply@propertyware.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Accounts"/>
+    <apps:property name="from" value="geico@email1.geico.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="smccs@emailonline.chase.com OR no-reply@alertsp.chase.com OR online.communications@alerts.comcast.net OR americanexpress@welcome.aexp.com OR citicards@info9.citibank.com OR targetcard.services@rcam.target.com OR customer.service@mail.synchronybank.com"/>
+    <apps:property name="label" value="Finances"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Finances"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="citicards@info.citibank.com OR statementcsc@e-470.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="to" value="c.h.r.i.s.s.t.e.r.l.i.n@gmail.com"/>
+    <apps:property name="shouldTrash" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldMarkAsRead" value="true"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="team@mint.com"/>
+    <apps:property name="label" value="Finances"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="subject" value="CSCI2400-F10"/>
+    <apps:property name="shouldArchive" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Travel"/>
+    <apps:property name="shouldMarkAsRead" value="true"/>
+    <apps:property name="from" value="deals@emails.priceline.com"/>
+    <apps:property name="shouldArchive" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="hasTheWord" value="list:(dcco-issues-drupal.org)"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="label" value="DCCO"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="hasTheWord" value="DCCO"/>
+    <apps:property name="label" value="DCCO"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="wildwood@conam.net"/>
+    <apps:property name="label" value="House"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="hasTheWord" value="Your Savings Catcher Receipt was Received"/>
+    <apps:property name="shouldTrash" value="true"/>
+    <apps:property name="from" value="savingscatcher@walmart.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Accounts"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="noreply@xcelenergy.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="House"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="ebill1@conservice.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="no-reply@woot.com OR orders@email.hollisterco.com OR noreply@graze.com"/>
+    <apps:property name="label" value="Orders"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Orders"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="ship-confirm@amazon.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Coupons"/>
+    <apps:property name="from" value="tinyprints@news.tinyprints.com"/>
+    <apps:property name="shouldArchive" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="from" value="happytrails@steamboat.com OR info@awardwallet.com OR mysticgardensspasalon_1@demandforced3.com"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="label" value="Coupons"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Coupons/Black Friday"/>
+    <apps:property name="to" value="chrissterlin+bf@gmail.com"/>
+    <apps:property name="shouldArchive" value="true"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Coupons/Black Friday"/>
+    <apps:property name="shouldArchive" value="true"/>
+    <apps:property name="from" value="hollister@hollister-email.com"/>
+  </entry>
+  <entry>
+    <category term="filter"/>
+    <title>Mail Filter</title>
+    <apps:property name="label" value="Coupons"/>
+    <apps:property name="shouldMarkAsRead" value="true"/>
+    <apps:property name="from" value="petsmart@email-petsmart.com"/>
+  </entry>
+</feed>

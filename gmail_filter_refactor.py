@@ -37,8 +37,12 @@ class Filter(object):
 		prop_exists = False
 		for prop in self.properties:
 			if prop.name == new_prop.name:
-				prop_exists = True
-				prop.value = prop.value + " OR " + new_prop.value
+				if prop.value != new_prop.value:
+					prop_exists = True
+					prop.value = prop.value + " OR " + new_prop.value
+				else:
+					prop_exists = True
+					prop.value = prop.value
 				break
 		if not prop_exists:
 			self.properties.append(new_prop)
@@ -146,10 +150,8 @@ def main():
 
 	print len(filters), len(new_filters)
 
-	#root = lxml.etree.Element("xml")
-	root = lxml.etree.Element("{http://www.w3.org/2005/Atom}feed")
 	root = lxml.etree.XML("<?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'></feed>")
-	#root.append(feed)
+	#root.set('encoding', 'UTF-8')
 	
 	for filter in new_filters:
 		entry = lxml.etree.Element("entry")
@@ -175,7 +177,9 @@ def main():
 			apps_property.set('value', prop.value)
 			entry.append(apps_property)
 		root.append(entry)
-	print(lxml.etree.tostring(root, pretty_print=True, xml_declaration=True))
+	xml_out = lxml.etree.tostring(root, pretty_print=True, xml_declaration=True, encoding='UTF-8')
+	with open('generatedFilters.xml', 'w') as fp:
+		fp.write(xml_out)
 
 # If actions are the same and filters are the same...
 
