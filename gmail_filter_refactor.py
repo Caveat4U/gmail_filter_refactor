@@ -36,7 +36,7 @@ class Filter(object):
 	def addProperty(self, new_prop):
 		prop_exists = False
 		for prop in self.properties:
-			if prop.category == new_prop.category:
+			if prop.name == new_prop.name:
 				prop_exists = True
 				prop.value = prop.value + " OR " + new_prop.value
 				break
@@ -145,6 +145,37 @@ def main():
 			new_filters.append(filter)
 
 	print len(filters), len(new_filters)
+
+	#root = lxml.etree.Element("xml")
+	root = lxml.etree.Element("{http://www.w3.org/2005/Atom}feed")
+	root = lxml.etree.XML("<?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'></feed>")
+	#root.append(feed)
+	
+	for filter in new_filters:
+		entry = lxml.etree.Element("entry")
+			# 	<category term='filter'></category>
+			# <title>Mail Filter</title>
+			# <id>tag:mail.google.com,2008:filter:1423065501641</id>
+			# <updated>2015-03-07T19:30:11Z</updated>
+			# <content></content>
+			# <apps:property name='from' value='texas_roadhouse@texasr.fbmta.com'/>
+			# <apps:property name='label' value='Coupons'/>
+			# <apps:property name='shouldArchive' value='true'/>
+			# <apps:property name='sizeOperator' value='s_sl'/>
+			# <apps:property name='sizeUnit' value='s_smb'/>
+		category = lxml.etree.Element('category')
+		category.set('term', 'filter')
+		title = lxml.etree.Element('title')
+		title.text = filter.filter_name
+		entry.append(category)
+		entry.append(title)
+		for prop in filter.getProperties():
+			apps_property = lxml.etree.Element('{http://schemas.google.com/apps/2006}property')
+			apps_property.set('name', prop.name)
+			apps_property.set('value', prop.value)
+			entry.append(apps_property)
+		root.append(entry)
+	print(lxml.etree.tostring(root, pretty_print=True, xml_declaration=True))
 
 # If actions are the same and filters are the same...
 
