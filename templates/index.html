@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Gmail Filter Application</title>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	</head>
+	<body>
+		{% if name %}
+		  <h1>Hello {{ name }}!</h1>
+		{% else %}
+		  <h1>Hello World!</h1>
+		{% endif %}
+		<form action="upload" method="post" name="upload" enctype="multipart/form-data">
+			<!--<div class="g-recaptcha" data-sitekey="6LejXwMTAAAAADwak1utRHB8k_MZPctQCF9HqZuS"></div>-->
+			<input type="file" required="required" name="file">
+			<input type="submit" value="Hello"/>
+		</form>
+	</body>
+</html>
