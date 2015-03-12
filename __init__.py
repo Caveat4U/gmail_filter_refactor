@@ -1,9 +1,10 @@
 
 import requests
 import os
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template, Response
 from werkzeug import secure_filename
 from werkzeug.contrib.fixers import ProxyFix
+import gmail_filter_refactor
 
 
 app = Flask(__name__)
@@ -25,8 +26,11 @@ def upload():
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            with open(filename) as fp:
-                print fp.read()
+            xml = gmail_filter_refactor.main(filename)
+            return Response(xml, mimetype='text/xml')
+            
+            # with open(filename) as fp:
+            #     print fp.read()
             # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         #     return redirect(url_for('uploaded_file', filename=filename))
         

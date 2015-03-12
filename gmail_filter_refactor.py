@@ -107,10 +107,10 @@ conditions = {
 	'hasAttachment'
 }
 
-def main():
+def main(filename):
 	filters = []
 	new_filters = []
-	doc = lxml.etree.parse('mailFilters.xml')
+	doc = lxml.etree.parse(filename)
 	for entry in doc.xpath('//atom:entry', namespaces=ns):
 		[title] = entry.xpath('./atom:title', namespaces=ns)
 		if title.text == "Mail Filter":
@@ -178,8 +178,9 @@ def main():
 			entry.append(apps_property)
 		root.append(entry)
 	xml_out = lxml.etree.tostring(root, pretty_print=True, xml_declaration=True, encoding='UTF-8')
-	with open('generatedFilters.xml', 'w') as fp:
-		fp.write(xml_out)
+	return xml_out
+	#with open('generatedFilters.xml', 'w') as fp:
+	#	fp.write(xml_out)
 
 # If actions are the same and filters are the same...
 
