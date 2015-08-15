@@ -27,9 +27,11 @@
 		  <h1>Hello World!</h1>
 		{% endif %}
 		<form action="upload" method="post" name="upload" enctype="multipart/form-data">
-			<!--<div class="g-recaptcha" data-sitekey="6LejXwMTAAAAADwak1utRHB8k_MZPctQCF9HqZuS"></div>-->
-			<input type="file" required="required" name="file">
-			<input type="submit" value="Hello"/>
+			<!--<div class="g-recaptcha" data-sitekey="6LejXwMTAAAAADwak1utRHB8k_MZPctQCF9HqZuS"></div>-->	
+			<div class="fileUpload btn btn-primary">
+			    <span>Upload</span>
+			    <input type="file" name="file" id="file" onchange='this.form.submit()'>
+			</div>
 		</form>
 	</body>
 </html>
